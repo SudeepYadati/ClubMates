@@ -1,0 +1,29 @@
+﻿@using ClubMates.Web.Models.AccountViewModel
+@model LoginViewModel
+
+@{
+	ViewData["Title"] = "Login";
+}
+
+<div class="clubmates form-container">
+	<form method="post" asp-controller="Account" asp-action="Login">
+		<div><h4>LogIn</h4> </div>
+		<div class="text-danger" asp-validation-summary="All"></div>
+
+		<div class="form-group">
+			<label asp-for="UserName">UserName</label>
+			<input asp-for="UserName" type="text" name="UserName" id="UserName" value="@Model.UserName" class="form-control" />
+		</div>
+
+		<div class="form-group">
+			<label asp-for="Password">Password</label>
+			<input asp-for="Password" type="password" name="Password" id="Password" value="@Model.Password" class="form-control" />
+		</div>
+
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary">Login</button>
+		</div>
+
+	</form>
+
+</div>

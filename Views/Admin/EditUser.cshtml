@@ -1,0 +1,16 @@
+﻿@model Clubmates.Web.Models.AccountViewModel.UserViewModel
+@{
+    ViewBag.title = "Edit User";
+}
+<div class="form-container">
+    <form class="form" asp-action="EditUser" asp-controller="Account" method="post">
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <input type="text" class="form-control" id="Name" value="@Model.Name">
+        </div>
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="text" class="form-control" id="Email" value="@Model.Email">
+        </div>
+    </form>
+</div>
